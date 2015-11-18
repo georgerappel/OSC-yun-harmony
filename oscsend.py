@@ -1,3 +1,4 @@
+#!/usr/bin/python
 #   
 #  README/GUIDE: https://github.com/bobbyziom/OSC-yun-harmony/blob/master/README.md
 #
@@ -22,7 +23,7 @@ msg.setAddress(adr)
 # put all message arguments in OSC message object
 for value in range(len(sys.argv)):
   if value > 3:
-    msg.append(sys.argv[value])
+    msg.append(float(sys.argv[value]))
 
 # see ya nevah :D
-client.send(msg) 
+client.send(msg)
